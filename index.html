@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asking her out</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="confirm js-confirm">
+        <div class="confirm-container">
+            <p class="title"> Will You Be My Wifeyyy Forever ? <span class="heart"></span></p>
+            <div class="confirm-actions">
+                <button class="btn-yes js-yes">Yes</button>
+                <button class="btn-no js-no">NO</button>
+            </div>
+        </div>
+    
+    <div class="dialog js-dialog">
+        <div class="dialog-container">
+            <p>Are you sure? This action cannot be undone. <span class="heart"></span></p>
+            <p>Let me date you anywhere you want. <span class="heart"></span> </p>
+
+        </div>
+    </div>
+    </div>
+    <script>
+        const $btnYes = document.querySelector('.js-yes'),
+
+$btnNo = document.querySelector('.js-no'),
+
+$confirm = document.querySelector('.js-confirm'),
+
+$dialog = document.querySelector('.js-dialog'),
+
+$body = document.querySelector('body')
+
+let counter = 0
+
+$btnYes.addEventListener('mouseover', (e) => {
+
+e.target.innerHTML = ' hurayyyy🤩'
+
+})
+
+$btnYes.addEventListener('click', () => {
+
+$body.classList.add('yes')
+
+})
+
+$btnNo.addEventListener('mouseover', (e) => {
+
+const $target = e.target
+
+$target.style.top = `${Math.random() * 200}px`
+  $target.style.right = `${Math.random() * 200}px`
+
+if (counter >= 5) {
+
+$target.innerHTML = 'Hmmmm'
+
+}
+
+counter += 1
+})
+    </script>
+</body>
+</html>
